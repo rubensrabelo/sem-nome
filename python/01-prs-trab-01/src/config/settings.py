@@ -30,9 +30,14 @@ class Settings(BaseSettings):
     backup: BackupConfig
 
     @classmethod
-    def load_settings(cls, yaml_path: str = "config.yaml") -> "Settings":
+    def load_settings(cls) -> "Settings":
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        src_dir = os.path.dirname(current_dir)
+        yaml_path = os.path.join(src_dir, "config.yaml")
+        
         if not os.path.exists(yaml_path):
             raise FileNotFoundError(f"Configuration file {yaml_path} not found.")
+            
         with open(yaml_path, "r", encoding="utf-8") as f:
             config_data = yaml.safe_load(f)
         return cls(**config_data)

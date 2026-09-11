@@ -3,11 +3,11 @@ from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import Response
 from collections import Counter
 
-from config.settings import settings
-from core.logging_config import log_event
-from modules.vault.service import load_all_metadata
-from core.security import calculate_sha256
-from modules.operations.service import generate_csv_report, create_global_zip_backup, create_selective_project_backup
+from src.config.settings import settings
+from src.core.logging_config import log_event
+from src.modules.vault.service import load_all_metadata
+from src.core.security import calculate_sha256
+from src.modules.operations.service import generate_csv_report, create_global_zip_backup, create_selective_project_backup
 
 router = APIRouter(prefix="/operations", tags=["System Operations"])
 

@@ -4,11 +4,11 @@ from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Query
 from fastapi.responses import FileResponse
 from typing import List, Optional
 
-from config.settings import settings
-from core.logging_config import log_event
-from core.security import calculate_sha256
-from modules.vault.models import DocumentMetadata, DocumentUpdate
-from modules.vault.service import load_all_metadata, save_all_metadata, save_secure_file
+from src.config.settings import settings
+from src.core.logging_config import log_event
+from src.core.security import calculate_sha256
+from src.modules.vault.models import DocumentMetadata, DocumentUpdate
+from src.modules.vault.service import load_all_metadata, save_all_metadata, save_secure_file
 
 router = APIRouter(prefix="/documents", tags=["Documents Vault"])
 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from .core.logging_config import setup_logging, log_event
-from .modules.vault.routes import router as vault_router
-from .modules.operations.routes import router as operations_router
+from src.core.logging_config import setup_logging, log_event
+from src.modules.vault.routes import router as vault_router
+from src.modules.operations.routes import router as operations_router
 
 app = FastAPI(
     title="Science Research Artifacts Vault API",

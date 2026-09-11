@@ -2,7 +2,7 @@ import os
 import json
 import aiofiles
 from typing import List
-from config.settings import settings
+from src.config.settings import settings
 
 METADATA_FILE = os.path.join(settings.storage.metadata_dir, "documents.json")
 

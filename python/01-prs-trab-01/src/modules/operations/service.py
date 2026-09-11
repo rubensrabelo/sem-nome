@@ -3,8 +3,8 @@ import csv
 import zipfile
 from io import StringIO
 from datetime import datetime
-from config.settings import settings
-from modules.vault.service import load_all_metadata
+from src.config.settings import settings
+from src.modules.vault.service import load_all_metadata
 
 def generate_csv_report() -> str:
     docs = load_all_metadata()
