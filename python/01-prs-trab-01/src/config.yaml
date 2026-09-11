@@ -1,0 +1,18 @@
+storage:
+  documents_dir: "./storage/documents"
+  metadata_dir: "./storage/metadata"
+  backups_dir: "./storage/backups"
+  logs_dir: "./storage/logs"
+
+upload:
+  max_size_mb: 20
+
+hash:
+  algorithm: "sha256"
+
+logging:
+  file_path: "./storage/logs/system.log"
+  level: "INFO"
+
+backup:
+  format: "zip"

@@ -53,7 +53,7 @@ A API estará disponível em `http://127.0.0.1:8000`. A documentação interativ
 A arquitetura do sistema segue o padrão de monólito modular, separando a infraestrutura global das regras e operações de negócio.
 
 ```text
-science_vault/
+src/
 │
 ├── config/                  # Configurações globais
 │   ├── __init__.py
